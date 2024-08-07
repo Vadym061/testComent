@@ -10,7 +10,7 @@ app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // Підключення до локального MongoDB
-mongoose.connect('mongodb://localhost:27017/portfolio', {
+mongoose.connect('mongodb+srv://root:OnPemGXXk4nz58Qg@cluster0.7wjwyci.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
     serverSelectionTimeoutMS: 5000  // Задаємо ліміт часу для вибору сервера
 }).then(() => {
     console.log('MongoDB connected');
