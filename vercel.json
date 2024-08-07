@@ -2,18 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "api/comments.js",
+        "src": "./server.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/api/comments",
-        "dest": "/api/comments.js"
-      },
-      {
-        "src": "/api/comments/(.*)",
-        "dest": "/api/comments.js"
+        "src": "/(.*)",
+        "dest": "/"
       }
     ]
   }
